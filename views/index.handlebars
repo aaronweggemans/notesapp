@@ -1,0 +1,133 @@
+<main>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="image">
+                    <div class="centered">
+                        <h1 class="introText">Welkom</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: absolute; width: 100%;">
+            <div class="container">
+                <div class="relative">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card profile-card-1">
+                                <img src="https://img.freepik.com/free-vector/black-vector-abstract-background_1340-8573.jpg?size=338&ext=jpg"
+                                     alt="profile-sample1" class="background"/>
+                                <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/16938990_1257089241049864_3329144873495526446_n.jpg?_nc_cat=108&_nc_ht=scontent-amt2-1.xx&oh=cd49c293819c79a6dd5b13ece6326f4e&oe=5C67B4AE"
+                                     alt="profile-image"
+                                     class="profile"/>
+                                <div class="card-content">
+                                    <h2>Aaron Weggemans</h2>
+                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
+                                        <i
+                                                class="fa fa-twitter"></i></a><a href="#"> <i
+                                            class="fa fa-google-plus"></i></a>
+                                    </div>
+                                    <div class="icon-block">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dicta et fuga
+                                            laudantium libero mollitia obcaecati odio rem voluptate. Nemo!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card profile-card-1">
+                                <img src="https://img.freepik.com/free-vector/black-vector-abstract-background_1340-8573.jpg?size=338&ext=jpg"
+                                     alt="profile-sample1" class="background"/>
+                                <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/16938990_1257089241049864_3329144873495526446_n.jpg?_nc_cat=108&_nc_ht=scontent-amt2-1.xx&oh=cd49c293819c79a6dd5b13ece6326f4e&oe=5C67B4AE"
+                                     alt="profile-image"
+                                     class="profile"/>
+                                <div class="card-content">
+                                    <h2>Aaron Weggemans</h2>
+                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
+                                        <i
+                                                class="fa fa-twitter"></i></a><a href="#"> <i
+                                            class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card profile-card-1">
+                                <img src="https://img.freepik.com/free-vector/black-vector-abstract-background_1340-8573.jpg?size=338&ext=jpg"
+                                     alt="profile-sample1" class="background"/>
+                                <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/16938990_1257089241049864_3329144873495526446_n.jpg?_nc_cat=108&_nc_ht=scontent-amt2-1.xx&oh=cd49c293819c79a6dd5b13ece6326f4e&oe=5C67B4AE"
+                                     alt="profile-image"
+                                     class="profile"/>
+                                <div class="card-content">
+                                    <h2>Aaron Weggemans</h2>
+                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
+                                        <i
+                                                class="fa fa-twitter"></i></a><a href="#"> <i
+                                            class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="section2" style="margin-top: 150px; margin-bottom: 200px;">
+    <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="slideIn">All notes</h2>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#noop}}{{jsondata}}{{/noop}}
+            {{#each jsondata}}
+                <tr>
+                    <td><a href="/edit/notes/{{ title }}">{{ title }}</a></td>
+                    <td>{{ body }}</td>
+                    <td><a href="/delete/notes/{{ title }}" class="btn btn-danger">Remove</a></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="slideIn">All database users</h2>
+                <small class="slideIn">Interactie met database werkt wel, maar word niet per direct uitgevoerd?</small>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#noop}}{{users}}{{/noop}}
+            {{#each users}}
+                <tr>
+                    <td><a href="/edit/user/{{ username }}">{{ username }}</a></td>
+                    <td>{{ email }}</td>
+                    <td><a href="/delete/user/{{ username }}" class="btn btn-danger">Delete User</a></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <hr/>
+</div>

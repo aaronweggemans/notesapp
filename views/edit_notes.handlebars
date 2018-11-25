@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="top" style="margin-top: 50px">
+        <h1 style="font-size: 2em">Edit Notes</h1>
+    </div>
+    <form id="note" action="add" method="post">
+        <div class="row mb-2">
+            <div class="col-md-4">
+                Add note title
+            </div>
+            <div class="col-md-8">
+                <input name="title" type="text" class="form-control" value="{{ val.title }}">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-4">
+                Add note text
+            </div>
+            <div class="col-md-8">
+                <textarea name="body" id="" rows="10" class="form-control">{{ val.body }}</textarea>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-12">
+                <div class="align" align="right">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/js/custom.js"></script>

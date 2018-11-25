@@ -1,0 +1,19 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "ik snap het niet nieeeeee",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "form-data": "^2.3.3",
+    "lodash": "^4.17.11",
+    "mysql": "^2.16.0"
+  }
+}
