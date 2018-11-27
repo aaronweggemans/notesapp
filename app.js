@@ -71,6 +71,7 @@ app.get('/add_note', function (req, res) {
 app.get('/delete/notes/:title', function (req, res) {
     // res.send(req.params.title);
     title = req.params.title;
+    bod = req.params.body;
 
     notes.delNote(title);
 
