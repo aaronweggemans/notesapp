@@ -36,36 +36,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-8">
                             <div class="card profile-card-1">
                                 <img src="https://img.freepik.com/free-vector/black-vector-abstract-background_1340-8573.jpg?size=338&ext=jpg"
                                      alt="profile-sample1" class="background"/>
-                                <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/16938990_1257089241049864_3329144873495526446_n.jpg?_nc_cat=108&_nc_ht=scontent-amt2-1.xx&oh=cd49c293819c79a6dd5b13ece6326f4e&oe=5C67B4AE"
-                                     alt="profile-image"
-                                     class="profile"/>
-                                <div class="card-content">
-                                    <h2>Aaron Weggemans</h2>
-                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
-                                        <i
-                                                class="fa fa-twitter"></i></a><a href="#"> <i
-                                            class="fa fa-google-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card profile-card-1">
-                                <img src="https://img.freepik.com/free-vector/black-vector-abstract-background_1340-8573.jpg?size=338&ext=jpg"
-                                     alt="profile-sample1" class="background"/>
-                                <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/16938990_1257089241049864_3329144873495526446_n.jpg?_nc_cat=108&_nc_ht=scontent-amt2-1.xx&oh=cd49c293819c79a6dd5b13ece6326f4e&oe=5C67B4AE"
-                                     alt="profile-image"
-                                     class="profile"/>
-                                <div class="card-content">
-                                    <h2>Aaron Weggemans</h2>
-                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
-                                        <i
-                                                class="fa fa-twitter"></i></a><a href="#"> <i
-                                            class="fa fa-google-plus"></i></a>
+                                <div class="card-content" style="margin-top: -150px">
+                                    <h2 style="font-size: 2em; margin-bottom: 10px">Weather</h2>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div>
+                                                <h2 class="insertName">Waar zijn we?</h2>
+                                                <small class="insertCountry">Country?</small>
+                                            </div>
+                                            <p class="insertCelsius" style="margin-top: 10px;">Jaja!</p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <!--<img src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/precipitation_new.jpg"-->
+                                                 <!--alt="" width="100%" height="300px">-->
+
+                                            <div id="map"
+                                                 style="width: 100%; height: 300px; color: black;">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +74,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="slideIn">All notes</h2>
+                <h2>All notes</h2>
             </div>
         </div>
         <table class="table table-striped">
@@ -97,7 +89,7 @@
             {{#noop}}{{jsondata}}{{/noop}}
             {{#each jsondata}}
                 <tr>
-                    <td><a href="/edit/notes/{{ title }}">{{ title }}</a></td>
+                    <td><a href="/edit/notes/{{ title }}/{{ body }}">{{ title }}</a></td>
                     <td>{{ body }}</td>
                     <td><a href="/delete/notes/{{ title }}" class="btn btn-danger">Remove</a></td>
                 </tr>
@@ -106,8 +98,8 @@
         </table>
         <div class="row">
             <div class="col-md-12">
-                <h2 class="slideIn">All database users</h2>
-                <small class="slideIn">Interactie met database werkt wel, maar word niet per direct uitgevoerd?</small>
+                <h2>All database users</h2>
+                <small>Interactie met database werkt wel, maar word niet per direct uitgevoerd?</small>
             </div>
         </div>
         <table class="table table-striped">
@@ -121,7 +113,7 @@
             {{#noop}}{{users}}{{/noop}}
             {{#each users}}
                 <tr>
-                    <td><a href="/edit/user/{{ username }}">{{ username }}</a></td>
+                    <td><a href="/edit/user/{{ username }}/{{ email }}">{{ username }}</a></td>
                     <td>{{ email }}</td>
                     <td><a href="/delete/user/{{ username }}" class="btn btn-danger">Delete User</a></td>
                 </tr>
@@ -130,4 +122,37 @@
         </table>
     </div>
     <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Weather</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="nopa">Find your City</h2>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-md-8">
+                <h2 class="nopa">
+                    Weather Information
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid dolorum
+                    ducimus facere maxime, officiis perspiciatis quae repudiandae sed temporibus unde voluptatibus?
+                    Accusantium culpa ducimus eligendi eveniet in magnam maiores modi, molestias nam nesciunt nisi numquam
+                    quasi qui quis vitae! Accusamus accusantium atque autem dignissimos dolor doloremque, dolores doloribus
+                    ea eius eum facilis fugit in iste laborum non quaerat quasi quibusdam quo repellat saepe sequi sunt
+                    voluptatem. Commodi consequatur delectus, dicta dignissimos, dolorem dolorum ea enim error excepturi
+                    expedita ipsam iusto labore laborum maiores minus mollitia non odio omnis quisquam quod reiciendis
+                    repudiandae sequi soluta sunt tempore ut vero voluptatibus.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+<script src="/js/custom.js"></script>
+<script src="/js/data_interaction.js"></script>
+<!--<script src="/js/google_maps.js"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXkn_iiij3dPDUhyarJPe6qVVn2MGOY8I&callback=initMap"
+        async defer></script>

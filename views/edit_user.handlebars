@@ -1,34 +1,19 @@
 <div class="container">
-    <div class="top" style="margin-top: 50px">
-        <h1 style="font-size: 2em">Edit user</h1>
+    <div class="top" style="margin-top: 100px;">
+        <h1 style="font-size: 2em; margin-bottom: 20px;">Edit User</h1>
     </div>
     <form id="note" action="add_user" method="post">
-    {{#noop}}{{data}}{{/noop}}
-    {{#each data}}
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Username
+        <div class="wrap">
+            <div class="mat-div">
+                <label for="username" class="mat-label">Username</label>
+                <input name="username" type="text" class="mat-input" id="username" value="{{username}}">
             </div>
-            <div class="col-md-8">
-                <input name="username" type="text" class="form-control" value="{{username}}">
+            <div class="mat-div">
+                <label for="email" class="mat-label">Email Adress</label>
+                <input name="email" type="email" class="mat-input" id="email" value="{{email}}">
             </div>
+            <input type="submit" class="btn btn-primary"/>
         </div>
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Email
-            </div>
-            <div class="col-md-8">
-                <input name="email" type="email" class="form-control" value="{{email}}">
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-12">
-                <div class="align" align="right">
-                    <input type="submit" class="btn btn-primary">
-                </div>
-            </div>
-        </div>
-    {{/each}}
     </form>
 </div>
 <script

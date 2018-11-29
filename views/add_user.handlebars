@@ -1,38 +1,22 @@
 <div class="container">
-    <div class="top" style="margin-top: 50px">
-        <h1 style="font-size: 2em">Add user</h1>
+    <div class="top" style="margin-top: 100px;">
+        <h1 style="font-size: 2em; margin-bottom: 20px;">Add User</h1>
     </div>
     <form id="note" action="add_user" method="post">
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Username
+        <div class="wrap">
+            <div class="mat-div">
+                <label for="username" class="mat-label">Username</label>
+                <input name="username" type="text" class="mat-input" id="username">
             </div>
-            <div class="col-md-8">
-                <input name="username" type="text" class="form-control">
+            <div class="mat-div">
+                <label for="email" class="mat-label">Email Adress</label>
+                <input name="email" type="email" class="mat-input" id="email">
             </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Email
+            <div class="mat-div">
+                <label for="password" class="mat-label">Password</label>
+                <input name="password" type="email" class="mat-input" id="password">
             </div>
-            <div class="col-md-8">
-                <input name="email" type="email" class="form-control">
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Password
-            </div>
-            <div class="col-md-8">
-                <input name="password" type="password" class="form-control">
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-12">
-                <div class="align" align="right">
-                    <input type="submit" class="btn btn-primary">
-                </div>
-            </div>
+            <input type="submit" class="btn btn-primary"/>
         </div>
     </form>
 </div>

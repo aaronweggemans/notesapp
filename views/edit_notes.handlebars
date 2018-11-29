@@ -1,30 +1,19 @@
 <div class="container">
-    <div class="top" style="margin-top: 50px">
-        <h1 style="font-size: 2em">Edit Notes</h1>
+    <div class="top" style="margin-top: 100px;">
+        <h1 style="font-size: 2em; margin-bottom: 20px;">Edit Notes</h1>
     </div>
-    <form id="note" action="add" method="post">
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Add note title
+
+    <form id="note" action="add_note" method="post">
+        <div class="wrap">
+            <div class="mat-div">
+                <label for="title-name" class="mat-label">Title Node</label>
+                <input name="title" type="text" class="mat-input" id="first-name" value="{{titleText}}">
             </div>
-            <div class="col-md-8">
-                <input name="title" type="text" class="form-control" value="{{ val.title }}">
+            <div class="mat-div">
+                <label for="text-name" class="mat-label">Text</label>
+                <textarea id="text-name" name="body" class="mat-input" cols="30" rows="10">{{bodyText}}</textarea>
             </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-4">
-                Add note text
-            </div>
-            <div class="col-md-8">
-                <textarea name="body" id="" rows="10" class="form-control">{{ val.body }}</textarea>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-12">
-                <div class="align" align="right">
-                    <input type="submit" class="btn btn-primary">
-                </div>
-            </div>
+            <input type="submit" class="btn btn-primary" />
         </div>
     </form>
 </div>

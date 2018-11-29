@@ -71,24 +71,24 @@ app.get('/add_note', function (req, res) {
 app.get('/delete/notes/:title', function (req, res) {
     // res.send(req.params.title);
     title = req.params.title;
-    bod = req.params.body;
 
     notes.delNote(title);
 
     res.redirect('/');
 });
 
-app.get('/edit/notes/:title', function (req, res) {
-    let val = [req.params.title, req.params.body];
-    res.render('edit_notes', {title : "edit Pagina", values : val});
+app.get('/edit/notes/:title/:body', function (req, res) {
+    let rTitle = req.params.title;
+    let rBody = req.params.body;
+
+    res.render('edit_notes', {title : "edit Pagina", titleText : rTitle, bodyText: rBody});
 });
 
-app.get('/edit/user/:username', function (req, res) {
-    let username = req.params.username;
+app.get('/edit/user/:username/:email', function (req, res) {
+    let rUsername = req.params.username;
+    let rEmail = req.params.email;
 
-    conn.query("SELECT * FROM `users` WHERE `username` = '" + username + "' ", function (err, result) {
-        res.render("edit_user", {title: "Edit user", data: result});
-    });
+    res.render("edit_user", {title: "Edit user", username: rUsername, email: rEmail});
 });
 
 app.get('/delete/user/:username', function (req, res) {

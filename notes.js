@@ -36,7 +36,7 @@ let checker = (title) => {
     let finder = JSON.parse(data);
 
     if (finder[0].title == title) {
-        new Error;
+        new Error();
     }
 };
 
@@ -87,7 +87,7 @@ let delNote = (title) => {
 
     for (var i = 0; i < notes.length; i++) {
         if (notes[i]["title"] == title) {
-            notes.splice(i, i); // => [Object]
+            notes.splice(i, i);
             saveNotes(notes);
         }
     }
